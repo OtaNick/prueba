@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="713.0" prefWidth="480.0" stylesheets="@css/style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.spotify.LinkController">
+   <children>
+      <HBox alignment="BOTTOM_CENTER" prefHeight="124.0" prefWidth="480.0">
+         <children>
+            <ImageView fx:id="logo" fitHeight="177.0" fitWidth="418.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" layoutX="11.0" layoutY="149.0" prefHeight="544.0" prefWidth="458.0" spacing="20.0">
+         <children>
+            <Label prefHeight="39.0" prefWidth="174.0" styleClass="subrayado" text="Crear Cuenta" textFill="#cfcfcf">
+               <font>
+                  <Font name="System Bold" size="27.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="alerta" opacity="0.0" text="Rellena todos los campos correctamente" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username" prefHeight="0.0" prefWidth="390.0" promptText="Usuario" style="-fx-text-fill: #2A2A2A;">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="contrasenya" prefHeight="0.0" prefWidth="390.0" promptText="Contraseña" style="-fx-text-fill: #2A2A2A;">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="email" prefHeight="0.0" prefWidth="390.0" promptText="email" style="-fx-text-fill: #2A2A2A;">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </TextField>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Genero:" textFill="WHITE" />
+                  <Pane prefHeight="26.0" prefWidth="22.0" />
+                  <RadioButton fx:id="btMasculino" mnemonicParsing="false" onAction="#btMasculino" pickOnBounds="false" text="Masculino" textFill="WHITE" />
+                  <Pane prefHeight="26.0" prefWidth="18.0" />
+                  <RadioButton fx:id="btFemenino" mnemonicParsing="false" onAction="#btFemenino" text="Femenino" textFill="WHITE" />
+                  <Pane prefHeight="26.0" prefWidth="18.0" />
+                  <RadioButton fx:id="btOtro" mnemonicParsing="false" onAction="#btOtro" text="Otro" textFill="WHITE" />
+               </children>
+            </HBox>
+            <DatePicker fx:id="fecha" promptText="Fecha de nacimiento" style="-fx-background-color: transparent;" />
+            <TextField fx:id="pais" prefHeight="0.0" prefWidth="390.0" promptText="País" style="-fx-text-fill: #2A2A2A;">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="codigoPostal" prefHeight="0.0" prefWidth="390.0" promptText="Código postal" style="-fx-text-fill: #2A2A2A;">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </TextField>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#btConfirmar" prefHeight="37.0" prefWidth="174.0" text="Confirmar" />
+                  <Pane prefHeight="37.0" prefWidth="22.0" />
+                  <Button mnemonicParsing="false" onAction="#btVolver" prefHeight="37.0" prefWidth="174.0" text="Ya tengo cuenta" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="45.0" left="45.0" right="45.0" top="45.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>
